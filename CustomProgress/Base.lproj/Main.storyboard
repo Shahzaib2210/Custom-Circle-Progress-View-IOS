@@ -19,6 +19,8 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZtP-AH-S6G" customClass="MTCircularSlider" customModule="MTCircularSlider">
                                 <rect key="frame" x="-22.5" y="385" width="459" height="538.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="minimumTrackTintColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="minTrackTint">
                                         <color key="value" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,23 +39,31 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="electric-bass" translatesAutoresizingMaskIntoConstraints="NO" id="Tag-GU-OD4">
                                 <rect key="frame" x="103.5" y="125.5" width="207" height="224.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQy-nm-4Mh">
-                                <rect key="frame" x="170" y="621.5" width="74" height="64"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="play"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX4-wZ-GOs">
-                                <rect key="frame" x="252" y="621.5" width="74" height="64"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icons8-forward-10-50"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3p-xh-y28">
-                                <rect key="frame" x="96" y="621.5" width="74" height="64"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icons8-replay-10-50 copy"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fij-eL-9Ub">
+                                <rect key="frame" x="131.5" y="604" width="151.5" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3p-xh-y28">
+                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
+                                        <color key="tintColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="backward.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQy-nm-4Mh">
+                                        <rect key="frame" x="50.5" y="0.0" width="50.5" height="31"/>
+                                        <color key="tintColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX4-wZ-GOs">
+                                        <rect key="frame" x="101" y="0.0" width="50.5" height="31"/>
+                                        <color key="tintColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="forward.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1D-kO-Z4w">
-                                <rect key="frame" x="171.5" y="553.5" width="71" height="21"/>
+                                <rect key="frame" x="171.5" y="553.5" width="71" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,26 +82,21 @@
                         <constraints>
                             <constraint firstItem="Tag-GU-OD4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.250453" id="3KL-iz-92T"/>
                             <constraint firstItem="ZtP-AH-S6G" firstAttribute="top" secondItem="Tag-GU-OD4" secondAttribute="bottom" multiplier="1.1" id="3sX-5I-Syw"/>
+                            <constraint firstItem="211-As-Ch8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kZA-w2-KqL" secondAttribute="trailing" symbolic="YES" id="4Hm-YW-VDW"/>
                             <constraint firstItem="211-As-Ch8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="CrN-Wx-A6y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HX4-wZ-GOs" secondAttribute="trailing" constant="88" id="EAS-Kj-DAc"/>
+                            <constraint firstItem="ZtP-AH-S6G" firstAttribute="top" secondItem="fij-eL-9Ub" secondAttribute="bottom" constant="-250" id="D28-f2-FlG"/>
                             <constraint firstItem="Q1D-kO-Z4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EJJ-nY-L8U"/>
                             <constraint firstItem="ZtP-AH-S6G" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.1" id="EZc-IG-tYt"/>
                             <constraint firstItem="ZtP-AH-S6G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYh-i9-6U0"/>
                             <constraint firstItem="kZA-w2-KqL" firstAttribute="centerY" secondItem="211-As-Ch8" secondAttribute="centerY" id="HdA-gp-RZe"/>
-                            <constraint firstItem="gQy-nm-4Mh" firstAttribute="centerY" secondItem="ZtP-AH-S6G" secondAttribute="centerY" id="IKl-a4-Gu0"/>
-                            <constraint firstItem="gQy-nm-4Mh" firstAttribute="leading" secondItem="Y3p-xh-y28" secondAttribute="trailing" id="LKa-wH-04U"/>
+                            <constraint firstItem="fij-eL-9Ub" firstAttribute="centerX" secondItem="ZtP-AH-S6G" secondAttribute="centerX" id="I4y-mH-Fxg"/>
                             <constraint firstItem="kZA-w2-KqL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="QAD-iF-Ae8"/>
                             <constraint firstItem="Tag-GU-OD4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SdY-Jz-0Q1"/>
                             <constraint firstItem="Q1D-kO-Z4w" firstAttribute="top" secondItem="ZtP-AH-S6G" secondAttribute="bottom" multiplier="0.6" id="ZR8-Al-sdk"/>
-                            <constraint firstItem="Y3p-xh-y28" firstAttribute="centerY" secondItem="gQy-nm-4Mh" secondAttribute="centerY" id="aiG-gb-fVT"/>
                             <constraint firstItem="Tag-GU-OD4" firstAttribute="top" secondItem="211-As-Ch8" secondAttribute="bottom" constant="30" id="fpd-4B-fls"/>
-                            <constraint firstItem="HX4-wZ-GOs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gQy-nm-4Mh" secondAttribute="trailing" symbolic="YES" id="iVY-kv-JoA"/>
                             <constraint firstItem="ZtP-AH-S6G" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="iyH-KB-5Ag"/>
-                            <constraint firstItem="HX4-wZ-GOs" firstAttribute="centerY" secondItem="gQy-nm-4Mh" secondAttribute="centerY" id="jLg-Nb-7Rh"/>
-                            <constraint firstItem="Y3p-xh-y28" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="pun-lw-1hS"/>
                             <constraint firstItem="Tag-GU-OD4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="uYi-9S-eWU"/>
                             <constraint firstItem="211-As-Ch8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="utR-04-OQE"/>
-                            <constraint firstItem="gQy-nm-4Mh" firstAttribute="centerX" secondItem="ZtP-AH-S6G" secondAttribute="centerX" id="vaj-tj-aZj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -100,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="87.228260869565219"/>
+            <point key="canvasLocation" x="131.8840579710145" y="87.053571428571431"/>
         </scene>
     </scenes>
     <designables>
@@ -109,11 +114,11 @@
         </designable>
     </designables>
     <resources>
+        <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="electric-bass" width="512" height="512"/>
-        <image name="icons8-forward-10-50" width="50" height="50"/>
-        <image name="icons8-replay-10-50 copy" width="50" height="50"/>
-        <image name="play" width="50" height="50"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
